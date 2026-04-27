@@ -1,0 +1,19 @@
+мой первый файл
+
+1 Check cron work : 
+crontap -l
+cat /tmp/disk.log
+
+2.htop install
+
+sudo apt install htop -y
+htop
+
+
+3. check memory ozu
+free -h
+df -h
+uptime
+
+4. check .sh file
+find ~/devops-learn -name "*.sh" -ls
