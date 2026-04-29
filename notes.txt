@@ -17,3 +17,8 @@ uptime
 
 4. check .sh file
 find ~/devops-learn -name "*.sh" -ls
+
+ansible
+
+ansible-playbook -i inventory.ini playbook.yml
+ansible-playbook -i inventory.ini playbook.yml --ask-become-pass
