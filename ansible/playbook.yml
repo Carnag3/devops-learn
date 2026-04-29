@@ -1,0 +1,12 @@
+---
+- hosts: local
+  tasks:
+    - name: Create test directory
+      file:
+        path: /tmp/ansible-test
+        state: directory
+
+    - name : Create test file
+      copy:
+        content: "Ansible works!"
+        dest: /tmp/ansible-test/hello.txt
