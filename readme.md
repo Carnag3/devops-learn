@@ -16,6 +16,6 @@
 
 - scripts/ - bash скрипты мониторинга и бэкапа
 - myapp/ - Docker образ с nginx
-- compose-app/ - docler - compose приложение
+- compose-app/ - docker - compose приложение
 - ansible/ - Ansible playbooks
 - monitoring/ - Prometheus + Grafana стек 
