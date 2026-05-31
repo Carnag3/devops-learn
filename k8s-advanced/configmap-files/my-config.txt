@@ -1,0 +1,3 @@
+Hello from ConfigMap with file!
+My name is Amir
+Today is Kubernetes day!
