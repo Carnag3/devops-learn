@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-emptydir-pod
+spec:
+  containers:
+  - name: writer
+    image: busybox
+    command: ["/bin/sh", "-c"]
+    args:
+      - |
+        echo "Hello from emptyDir volume!" > /data/hello.txt
+        echo "Current time: $(date)" >> /data/hello.txt
+        sleep 3600
+    volumeMounts:
+    - name: shared-data
+      mountPath: /data
+  volumes:
+  - name: shared-data
+    emptyDir: {}
