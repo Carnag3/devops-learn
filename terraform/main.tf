@@ -7,6 +7,6 @@ terraform {
 }
 
 resource "local_file" "example" {
-  content = "Hello from Terraform!:\nThis file was created by Terraform."
-  filename = "${path.module}/hello.txt"
+  content = var.content
+  filename = "${path.module}/${var.filename}"
 }
