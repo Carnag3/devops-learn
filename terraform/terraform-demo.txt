@@ -1,0 +1,2 @@
+Этот файл создан через terraform.tfvars!
+Terraform - это отлично!
