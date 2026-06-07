@@ -1,23 +1,15 @@
 terraform {
   required_providers {
     local = {
-      source = "hashicorp/local"
+      source  = "hashicorp/local"
+      version = "~> 2.5"
     }
   }
 }
 
-resource "local_file" "example" {
-  content = var.content
-  filename = "${path.module}/${var.filename}"
-}
+module "my_file" {
+  source  = "./modules/local-file"
 
-output "file_path" {
-  description = "Path to the created file"
-  value       = local_file.example.filename
-}
-
-output "file_content"{
-  description = "Content of the created file"
-  value       = local_file.example.content
-  sensitive   = true
+  filename = "module-demo.txt"
+  content  = "Этот файл создан через Terraform Module!"
 }
